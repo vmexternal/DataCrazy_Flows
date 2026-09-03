@@ -1,0 +1,148 @@
+{
+  "data": {
+    "tags": [],
+    "additionalFields": [],
+    "businessLossReasons": [],
+    "activityTypes": [],
+    "pipelines": [],
+    "departments": [],
+    "workingHours": [],
+    "automations": [
+      {
+        "id": "51a2943d-a70e-44f7-b87c-76f747cdc1d2",
+        "name": "Qualidade Bms Comunidade",
+        "description": "",
+        "group": "[ API ] ",
+        "active": false,
+        "imageUrl": "",
+        "loopLevel": 0,
+        "versionId": "c44192bb-505d-44e3-84f3-d7c9fa1ebc3e",
+        "versionName": "Qualidade Bms Comunidade",
+        "version": 1,
+        "tenantId": "8db0324e-d916-4c9c-bf99-50736c36b386",
+        "notes": [
+          {
+            "options": {
+              "text": "Coloque sua api datacrazy",
+              "color": "#fde68a",
+              "width": 200,
+              "height": 200
+            },
+            "presentation": {
+              "x": -6067.516754860683,
+              "y": -2007.558109278614
+            },
+            "id": "3494c52f-7803-4c09-9dce-0c554a9e6e45"
+          }
+        ],
+        "blocks": [
+          {
+            "id": "46e84093-6363-4255-9007-41fd739c61f5",
+            "type": "javascript",
+            "presentation": {
+              "x": -5682.261813717605,
+              "y": -1920.42791942335
+            },
+            "options": {
+              "timeout": 30,
+              "nextBlockId": "a5857479-9ca7-4f68-a5c8-0f4569da574b",
+              "datasourceName": "RETURN-INSTANCES",
+              "javascriptCode": "const resposta = await session.datasources[\"API-INSTANCIAS\"];\r\n\r\nlet dados = resposta;\r\n\r\n// ==========================================\r\n// NORMALIZA JSON\r\n// ==========================================\r\n\r\nif (typeof dados === \"string\") {\r\n    try {\r\n        dados = JSON.parse(dados);\r\n    } catch (e) {\r\n        return {\r\n            sucesso: false,\r\n            erro: \"Resposta não é um JSON válido\",\r\n            detalhe: String(e)\r\n        };\r\n    }\r\n}\r\n\r\nfunction encontrarArray(obj) {\r\n    if (Array.isArray(obj)) return obj;\r\n    if (!obj || typeof obj !== \"object\") return null;\r\n    if (Array.isArray(obj.resultados)) return obj.resultados;\r\n    if (Array.isArray(obj.data)) return obj.data;\r\n    for (const chave of Object.keys(obj)) {\r\n        const valor = obj[chave];\r\n        if (valor && typeof valor === \"object\") {\r\n            const encontrado = encontrarArray(valor);\r\n            if (encontrado) return encontrado;\r\n        }\r\n    }\r\n    return null;\r\n}\r\n\r\nconst lista = encontrarArray(dados);\r\n\r\nif (!lista || lista.length === 0) {\r\n    return { sucesso: false, total: 0, erro: \"Nenhum resultado encontrado\" };\r\n}\r\n\r\nfunction tierParaNumero(tier) {\r\n    if (!tier) return null;\r\n    const valor = String(tier).toUpperCase();\r\n    if (valor.includes(\"2K\")) return 2000;\r\n    if (valor.includes(\"250\")) return 250;\r\n    if (valor.includes(\"1K\")) return 1000;\r\n    if (valor.includes(\"10K\")) return 10000;\r\n    if (valor.includes(\"100K\")) return 100000;\r\n    return null;\r\n}\r\n\r\n// ==========================================\r\n// STATUS REAIS DE BLOQUEIO/BANIMENTO NA META\r\n// (isso sim é crítico — diferente de \"nome reprovado\")\r\n// ==========================================\r\n\r\nconst STATUS_CRITICOS = [\"BANNED\", \"RESTRICTED\", \"FLAGGED\", \"RATE_LIMITED\", \"DISABLED\"];\r\nconst STATUS_ATENCAO = [\"PENDING_DELETION\", \"MIGRATED\", \"DELETED\"];\r\n\r\nconst GRAPH_VERSION = \"v20.0\";\r\n\r\nasync function buscarDadosNumero(phoneNumberId, token) {\r\n    if (!phoneNumberId || !token) {\r\n        return {\r\n            messaging_limit_tier: null,\r\n            quality_rating: null,\r\n            status_graph: null,\r\n            name_status: null,\r\n            throughput: null,\r\n            erroGraph: \"sem phoneNumberId ou token\"\r\n        };\r\n    }\r\n\r\n    try {\r\n        // messaging_limit_tier foi DEPRECIADO pela Meta.\r\n        // Campo correto atual: whatsapp_business_manager_messaging_limit\r\n        const url = `https://graph.facebook.com/${GRAPH_VERSION}/${phoneNumberId}?fields=quality_rating,whatsapp_business_manager_messaging_limit,status,name_status,throughput`;\r\n        const resp = await fetch(url, { headers: { Authorization: `Bearer ${token}` } });\r\n        const json = await resp.json();\r\n\r\n        if (json.error) {\r\n            return {\r\n                messaging_limit_tier: null,\r\n                quality_rating: null,\r\n                status_graph: null,\r\n                name_status: null,\r\n                throughput: null,\r\n                erroGraph: json.error.message || \"erro desconhecido na Graph API\"\r\n            };\r\n        }\r\n\r\n        return {\r\n            messaging_limit_tier: json.whatsapp_business_manager_messaging_limit || null,\r\n            quality_rating: json.quality_rating || null,\r\n            status_graph: json.status || null,\r\n            name_status: json.name_status || null,\r\n            throughput: json.throughput?.level || null,\r\n            erroGraph: null\r\n        };\r\n    } catch (e) {\r\n        return {\r\n            messaging_limit_tier: null,\r\n            quality_rating: null,\r\n            status_graph: null,\r\n            name_status: null,\r\n            throughput: null,\r\n            erroGraph: String(e)\r\n        };\r\n    }\r\n}\r\n\r\nasync function buscarMensagensEnviadas24h(wabaId, token) {\r\n    if (!wabaId || !token) {\r\n        return { enviadas24h: null, erroAnalytics: \"sem wabaId ou token\" };\r\n    }\r\n    try {\r\n        const agora = Math.floor(Date.now() / 1000);\r\n        const ontem = agora - 86400;\r\n        const url = `https://graph.facebook.com/${GRAPH_VERSION}/${wabaId}?fields=analytics.start(${ontem}).end(${agora}).granularity(DAY)`;\r\n        const resp = await fetch(url, { headers: { Authorization: `Bearer ${token}` } });\r\n        const json = await resp.json();\r\n\r\n        if (json.error) {\r\n            return { enviadas24h: null, erroAnalytics: json.error.message || \"sem permissão de analytics\" };\r\n        }\r\n\r\n        const pontos = json.analytics?.data_points || [];\r\n        const totalEnviadas = pontos.reduce((soma, p) => soma + (Number(p.sent) || 0), 0);\r\n        return { enviadas24h: totalEnviadas, erroAnalytics: null };\r\n    } catch (e) {\r\n        return { enviadas24h: null, erroAnalytics: String(e) };\r\n    }\r\n}\r\n\r\nconst TAMANHO_LOTE = 10;\r\n\r\nasync function processarEmLotes(itens, tamanhoLote, fn) {\r\n    const resultado = [];\r\n    for (let i = 0; i < itens.length; i += tamanhoLote) {\r\n        const lote = itens.slice(i, i + tamanhoLote);\r\n        const respostasLote = await Promise.all(lote.map(fn));\r\n        resultado.push(...respostasLote);\r\n    }\r\n    return resultado;\r\n}\r\n\r\nconst resultados = await processarEmLotes(lista, TAMANHO_LOTE, async (item) => {\r\n\r\n    const wabaId = item.wabaId || item.config?.wabaId || null;\r\n    const businessId = item.businessId || item.config?.businessId || null;\r\n    const phoneNumber = item.phoneNumber || item.config?.phoneNumber || null;\r\n    const phoneNumberId = item.phoneNumberId || item.config?.phoneNumberId || null;\r\n    const token = item.config?.token || null;\r\n    const statusCrm = item.status || null;\r\n\r\n    const [dadosNumero, dadosAnalytics] = await Promise.all([\r\n        buscarDadosNumero(phoneNumberId, token),\r\n        buscarMensagensEnviadas24h(wabaId, token)\r\n    ]);\r\n\r\n    const limite = dadosNumero.messaging_limit_tier || item.limite || null;\r\n    const limiteNumerico = tierParaNumero(limite);\r\n    const enviadas24h = dadosAnalytics.enviadas24h;\r\n\r\n    let limiteZerado = false;\r\n    let percentualUsado = null;\r\n    if (limiteNumerico && enviadas24h !== null) {\r\n        percentualUsado = Math.round((enviadas24h / limiteNumerico) * 100);\r\n        limiteZerado = enviadas24h >= limiteNumerico;\r\n    }\r\n\r\n    // ======================================\r\n    // CLASSIFICAÇÃO CORRETA (sem misturar conceitos)\r\n    // ======================================\r\n\r\n    const banidoOuRestrito = STATUS_CRITICOS.includes(dadosNumero.status_graph);\r\n    const emAtencaoMeta = STATUS_ATENCAO.includes(dadosNumero.status_graph);\r\n    const nomeReprovado = dadosNumero.name_status === \"DECLINED\";\r\n\r\n    return {\r\n        id: item.id || null,\r\n        nome: item.name || null,\r\n        phoneNumber,\r\n        phoneNumberId,\r\n        wabaId,\r\n        businessId,\r\n\r\n        ativo: item.isActive === true || item.ativo === true,\r\n        statusCrm,\r\n        conectado: statusCrm === \"CONNECTED\",\r\n\r\n        statusMeta: dadosNumero.status_graph,\r\n        nameStatus: dadosNumero.name_status,\r\n        throughput: dadosNumero.throughput,\r\n\r\n        banidoOuRestrito,\r\n        emAtencaoMeta,\r\n        nomeReprovado,\r\n\r\n        qualidade: dadosNumero.quality_rating,\r\n\r\n        limite,\r\n        limiteNumerico,\r\n        enviadas24h,\r\n        percentualUsado,\r\n        limiteZerado,\r\n\r\n        erro: item.erro || dadosNumero.erroGraph || null,\r\n        erroAnalytics: dadosAnalytics.erroAnalytics\r\n    };\r\n});\r\n\r\n// ==========================================\r\n// CLASSIFICAÇÃO POR SEVERIDADE (3 NÍVEIS CLAROS)\r\n// ==========================================\r\n\r\nfor (const item of resultados) {\r\n    const critico = [];\r\n    const atencao = [];\r\n    const info = [];\r\n\r\n    if (item.banidoOuRestrito) critico.push(\"BANIDO_OU_RESTRITO_META\");\r\n    if (item.limiteZerado) critico.push(\"LIMITE_DIARIO_ZERADO\");\r\n    if (item.qualidade === \"RED\") critico.push(\"QUALIDADE_RED\");\r\n    if (item.erro) critico.push(\"ERRO_CONSULTA_GRAPH\");\r\n\r\n    if (item.emAtencaoMeta) atencao.push(\"STATUS_META_\" + item.statusMeta);\r\n    if (item.nomeReprovado) atencao.push(\"NOME_EXIBICAO_REPROVADO\");\r\n    if (item.qualidade === \"UNKNOWN\" || !item.qualidade) atencao.push(\"QUALIDADE_AINDA_NAO_AVALIADA\");\r\n    if (!item.conectado) atencao.push(\"DESCONECTADO\");\r\n    if (!item.ativo) atencao.push(\"INATIVO\");\r\n\r\n    if (!item.phoneNumber) info.push(\"SEM_TELEFONE_CADASTRADO\");\r\n    if (!item.limite) info.push(\"SEM_TIER_ATRIBUIDO_AINDA\");\r\n\r\n    item.critico = critico;\r\n    item.atencao = atencao;\r\n    item.info = info;\r\n\r\n    item.nivel = critico.length > 0 ? \"CRITICO\" : atencao.length > 0 ? \"ATENCAO\" : \"OK\";\r\n\r\n    delete item.banidoOuRestrito;\r\n    delete item.emAtencaoMeta;\r\n    delete item.nomeReprovado;\r\n}\r\n\r\nconst ordemNivel = { CRITICO: 0, ATENCAO: 1, OK: 2 };\r\nresultados.sort((a, b) => ordemNivel[a.nivel] - ordemNivel[b.nivel]);\r\n\r\n// ==========================================\r\n// INDICADORES GERAIS\r\n// ==========================================\r\n\r\nconst total = resultados.length;\r\nconst criticos = resultados.filter(x => x.nivel === \"CRITICO\");\r\nconst emAtencao = resultados.filter(x => x.nivel === \"ATENCAO\");\r\nconst saudaveis = resultados.filter(x => x.nivel === \"OK\");\r\n\r\nconst capacidadeTotal = resultados.reduce((s, x) => s + (Number(x.limiteNumerico) || 0), 0);\r\nconst totalEnviadas24h = resultados.reduce((s, x) => s + (Number(x.enviadas24h) || 0), 0);\r\n\r\n// ==========================================\r\n// CAPACIDADE REAL DO PORTFOLIO (sem duplicar)\r\n// Desde out/2025 a Meta compartilha o limite de mensageria\r\n// por businessId (portfolio), não mais por número individual.\r\n// Somar o tier de cada número conta a mesma cota várias vezes\r\n// quando há mais de um BM no mesmo businessId.\r\n// ==========================================\r\n\r\nconst tierPorBusinessId = {};\r\nfor (const item of resultados) {\r\n    if (!item.businessId || !item.limiteNumerico) continue;\r\n    // guarda o maior valor visto pro grupo (deveria ser sempre igual,\r\n    // mas por segurança não assume consistência)\r\n    const atual = tierPorBusinessId[item.businessId] || 0;\r\n    tierPorBusinessId[item.businessId] = Math.max(atual, item.limiteNumerico);\r\n}\r\n\r\nconst capacidadeRealPortfolio = Object.values(tierPorBusinessId).reduce((s, v) => s + v, 0);\r\nconst quantidadePortfoliosUnicos = Object.keys(tierPorBusinessId).length;\r\n\r\nconst distribuicaoQualidade = {};\r\nfor (const item of resultados) {\r\n    const q = item.qualidade || \"DESCONHECIDA\";\r\n    distribuicaoQualidade[q] = (distribuicaoQualidade[q] || 0) + 1;\r\n}\r\n\r\nconst distribuicaoStatusMeta = {};\r\nfor (const item of resultados) {\r\n    const s = item.statusMeta || \"DESCONHECIDO\";\r\n    distribuicaoStatusMeta[s] = (distribuicaoStatusMeta[s] || 0) + 1;\r\n}\r\n\r\n// ==========================================\r\n// GRUPOS: BMs no mesmo businessId (risco em cascata)\r\n// ==========================================\r\n\r\nconst porBusinessId = {};\r\nfor (const item of resultados) {\r\n    if (!item.businessId) continue;\r\n    if (!porBusinessId[item.businessId]) porBusinessId[item.businessId] = [];\r\n    porBusinessId[item.businessId].push({\r\n        id: item.id, nome: item.nome, nivel: item.nivel, qualidade: item.qualidade\r\n    });\r\n}\r\n\r\nconst gruposComRiscoCompartilhado = Object.entries(porBusinessId)\r\n    .filter(([, itens]) => itens.length > 1 && itens.some(i => i.nivel === \"CRITICO\"))\r\n    .map(([businessId, itens]) => ({\r\n        businessId,\r\n        quantidadeNumeros: itens.length,\r\n        numeros: itens\r\n    }));\r\n\r\n// ==========================================\r\n// DIAGNÓSTICO EM TEXTO CORRIDO (leitura rápida)\r\n// ==========================================\r\n\r\nconst nomesBanidos = criticos.filter(x => x.critico.includes(\"BANIDO_OU_RESTRITO_META\")).map(x => x.nome);\r\nconst nomesQualidadeRed = criticos.filter(x => x.critico.includes(\"QUALIDADE_RED\")).map(x => x.nome);\r\nconst nomesLimiteZerado = criticos.filter(x => x.critico.includes(\"LIMITE_DIARIO_ZERADO\")).map(x => x.nome);\r\nconst nomesReprovados = emAtencao.filter(x => x.atencao.includes(\"NOME_EXIBICAO_REPROVADO\")).map(x => x.nome);\r\n\r\nconst linhasDiagnostico = [];\r\nif (nomesBanidos.length) linhasDiagnostico.push(`${nomesBanidos.length} conta(s) banida(s)/restrita(s) pela Meta: ${nomesBanidos.join(\", \")}.`);\r\nif (nomesQualidadeRed.length) linhasDiagnostico.push(`${nomesQualidadeRed.length} conta(s) com qualidade RED (risco alto de ban): ${nomesQualidadeRed.join(\", \")}.`);\r\nif (nomesLimiteZerado.length) linhasDiagnostico.push(`${nomesLimiteZerado.length} conta(s) já bateram o limite diário de mensagens: ${nomesLimiteZerado.join(\", \")}.`);\r\nif (nomesReprovados.length) linhasDiagnostico.push(`${nomesReprovados.length} conta(s) com nome de exibição reprovado (não bloqueia envio, mas vale corrigir): ${nomesReprovados.join(\", \")}.`);\r\nif (linhasDiagnostico.length === 0) linhasDiagnostico.push(\"Nenhum problema crítico identificado no momento.\");\r\n\r\n// ==========================================\r\n// RETORNO FINAL\r\n// ==========================================\r\n\r\nreturn {\r\n    sucesso: true,\r\n    consultadoEm: new Date().toISOString(),\r\n\r\n    diagnostico: linhasDiagnostico,\r\n\r\n    resumo: {\r\n        total,\r\n        criticos: criticos.length,\r\n        emAtencao: emAtencao.length,\r\n        saudaveis: saudaveis.length,\r\n\r\n        capacidadeTotal,\r\n        capacidadeRealPortfolio,\r\n        quantidadePortfoliosUnicos,\r\n        totalEnviadas24h,\r\n        percentualCapacidadeUsada: capacidadeRealPortfolio\r\n            ? Math.round((totalEnviadas24h / capacidadeRealPortfolio) * 100)\r\n            : null,\r\n\r\n        distribuicaoQualidade,\r\n        distribuicaoStatusMeta\r\n    },\r\n\r\n    alertas: {\r\n        criticos: criticos.map(x => ({\r\n            id: x.id, nome: x.nome, phoneNumber: x.phoneNumber, businessId: x.businessId,\r\n            motivos: x.critico, statusMeta: x.statusMeta, qualidade: x.qualidade\r\n        })),\r\n        atencao: emAtencao.map(x => ({\r\n            id: x.id, nome: x.nome, phoneNumber: x.phoneNumber, businessId: x.businessId,\r\n            motivos: x.atencao\r\n        })),\r\n        gruposComRiscoCompartilhado\r\n    },\r\n\r\n    resultados\r\n};",
+              "datasourceColor": "#10b981",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "23a80144-0b61-4084-a04e-346416317dd2"
+          },
+          {
+            "id": "88a106e3-fc7f-483d-a2b0-f39c6af742dc",
+            "type": "api",
+            "presentation": {
+              "x": -6073.014704488904,
+              "y": -1915.909016641593
+            },
+            "options": {
+              "apis": [
+                {
+                  "name": "json-http-request-api",
+                  "group": "http",
+                  "options": {
+                    "url": "https://messaging.g1.datacrazy.io/api/messaging/instances",
+                    "body": "{\r\n    \r\n}",
+                    "query": [],
+                    "method": "GET",
+                    "headers": [
+                      {
+                        "key": "Authorization",
+                        "value": "sua api datacrazy"
+                      }
+                    ],
+                    "retryCount": 0,
+                    "datasourceName": "API-INSTANCIAS",
+                    "datasourceColor": "#84cc16",
+                    "retryIntervalSeconds": 5,
+                    "responseHeadersOverrides": []
+                  }
+                }
+              ],
+              "nextBlockId": "46e84093-6363-4255-9007-41fd739c61f5",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "e4679766-b884-4bf8-9b08-c7e486adc5cb"
+          },
+          {
+            "id": "a5857479-9ca7-4f68-a5c8-0f4569da574b",
+            "type": "chat",
+            "presentation": {
+              "x": -5223.402218556128,
+              "y": -1791.028203202469
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "b2900dd4-1e0b-4122-94a9-efc322c6d562",
+                  "options": {
+                    "text": "{.|[RETURN-INSTANCES].}",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": null
+          },
+          {
+            "id": "ef16791c-2207-421b-8b5e-6274444c0e64",
+            "type": "trigger",
+            "presentation": {
+              "x": -6445.525066038012,
+              "y": -1904.419051326319
+            },
+            "options": {
+              "triggers": [
+                {
+                  "name": "manually-lead-trigger",
+                  "group": "lead",
+                  "options": {}
+                }
+              ],
+              "nextBlockId": "88a106e3-fc7f-483d-a2b0-f39c6af742dc"
+            },
+            "sourceBlockId": "230f8b81-6053-4005-8857-3da504e7a93b"
+          }
+        ]
+      }
+    ]
+  }
+}
