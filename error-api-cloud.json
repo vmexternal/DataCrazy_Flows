@@ -1,0 +1,3590 @@
+{
+  "hasInvalidReferences": false,
+  "data": {
+    "tags": [],
+    "additionalFields": [],
+    "businessLossReasons": [],
+    "activityTypes": [],
+    "pipelines": [],
+    "departments": [],
+    "workingHours": [],
+    "automations": [
+      {
+        "id": "67ad6e8b-93e3-4c16-af1e-f193ed94ce65",
+        "name": "Error API Cloud",
+        "description": "",
+        "group": "[ Automação dia dia ]",
+        "active": true,
+        "imageUrl": "",
+        "loopLevel": 0,
+        "versionId": "a9ac5292-c35c-4642-8396-7588a810474f",
+        "versionName": "Tratar errors apis",
+        "version": 1,
+        "tenantId": "8db0324e-d916-4c9c-bf99-50736c36b386",
+        "notes": [],
+        "blocks": [
+          {
+            "id": "01d112a2-03fe-49a6-ad6a-29f1b544857e",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 6400
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "4e05a93e-25f7-449c-a3fb-5ca82b9482eb",
+                  "options": {
+                    "text": "ERRO 132015 — Template is Paused\n\nMensagem: O modelo foi pausado por baixa qualidade e não pode ser enviado em mensagens.\n\nAção: Aguarde a reativação ou utilize outro template aprovado e com boa qualidade.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "6e7b95dd-8d28-47c1-b991-b28768a9482c"
+          },
+          {
+            "id": "05314531-806a-4d8e-baa3-20237de4f44b",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 6940
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "d697dc03-5db0-46a4-b896-ab1ae9173d7b",
+                  "options": {
+                    "text": "ERRO 132069 — Flow is throttled\n\nMensagem: O Flow está temporariamente limitado por excesso de envios.\n\nAção: Aguarde o limite liberar antes de tentar novamente.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "d0f51181-d0de-434b-933d-d62e55125b87"
+          },
+          {
+            "id": "0963330f-9cb9-4fc6-ad30-f1462ca18de5",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 7920
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "05a9834f-b6e7-4a30-b4af-d73957628198",
+                  "options": {
+                    "text": "ERRO 133000 — Incomplete Deregistration\n\nMensagem: Uma tentativa anterior de remover o registro do número não foi concluída corretamente.\n\nAção: Conclua/corrija o processo de desregistro antes de registrar novamente.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "bd455e6b-9f20-48b0-aba9-4cefa2ed7f53"
+          },
+          {
+            "id": "11531007-45d6-4ea2-879b-f1f15ff3e92b",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 6220
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "e7862c7a-c5f9-4dd0-ad53-d93bfa1f1c2b",
+                  "options": {
+                    "text": "ERRO 132012 — Template Parameter Format Mismatch\n\nMensagem: Um ou mais parâmetros do template foram enviados em formato incompatível com o componente definido.\n\nAção: Corrija o tipo/formato dos parâmetros enviados.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "6fdcb9cc-a615-43ac-b62f-03b732d2e782"
+          },
+          {
+            "id": "13c354d0-9918-4011-afc0-9e29db72f296",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 1340
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "7051c47e-2350-4f50-8f15-018492612e27",
+                  "options": {
+                    "text": "ERRO 4 — API Too Many Calls\n\nMensagem: O aplicativo atingiu o limite de chamadas da API.\n\nAção: Reduza a frequência e tente novamente com espera/backoff.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "fc44a140-9bb9-4103-a719-e1237665a3bb"
+          },
+          {
+            "id": "1658e63e-5f35-4949-90d2-31521a2dc513",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 5500
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "1e6207c4-592e-4f4d-bc6d-f4cbb2d92966",
+                  "options": {
+                    "text": "ERRO 132000 — Template Param Count Mismatch\n\nMensagem: A quantidade de valores enviados para as variáveis não corresponde à quantidade de variáveis definida no template.\n\nAção: Ajuste a quantidade de parâmetros do header, body e/ou buttons.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "eac94ed8-7d8f-4058-9093-26b8a42ddd56"
+          },
+          {
+            "id": "19b320e8-c90d-4021-abb0-1355c010c0a4",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 11680
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "a8b50318-7db4-4086-a0af-69d35ffb448b",
+                  "options": {
+                    "text": "ERRO 131009 — Parameter value is not valid\n\nMensagem: Um ou mais valores de parâmetros são inválidos.\n\nAção: Corrija os valores enviados no payload.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "d6e41c9c-f352-43b0-8f70-5627bb91898a"
+          },
+          {
+            "id": "1df98545-e3a1-43d9-a2b9-64e271f2cd23",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 10160
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "dd817c25-572d-4006-8c02-093348b237e8",
+                  "options": {
+                    "text": "ERRO 131053 — Media upload error\n\nMensagem: Não foi possível fazer upload da mídia usada na mensagem.\n\nAção: Valide o arquivo, formato, tamanho e tente o upload novamente.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "84f0c2cd-69f5-4081-951f-7940fba377b7"
+          },
+          {
+            "id": "1e88c3d1-67d3-4c27-a3b7-8e5b4c6dab10",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 7740
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "6fef0d97-6001-4d70-81fc-96169ddf08c6",
+                  "options": {
+                    "text": "ERRO 131057 — Account in maintenance mode\n\nMensagem: A conta do WhatsApp Business está em modo de manutenção.\n\nAção: Aguarde e tente novamente depois.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "596daaec-dbe6-48ce-8216-c33cd794559b"
+          },
+          {
+            "id": "23ffb104-ccda-4f7d-a8d4-609fe38af69e",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 8640
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "a7609b25-1775-4798-8e88-c1eb53a0b8ad",
+                  "options": {
+                    "text": "ERRO 133008 — Too many PIN guesses\n\nMensagem: Houve tentativas demais de adivinhar/informar o PIN de verificação em duas etapas.\n\nAção: Aguarde antes de tentar novamente e use o PIN correto.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "d6c8c0f0-e537-4ed5-bb30-15e972ba1328"
+          },
+          {
+            "id": "245d8582-a30b-4d9b-b4a8-d9731472e94f",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 900
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "45ed6100-0f4c-461f-88f9-8e6ea73ec02f",
+                  "options": {
+                    "text": "ERRO 131005 — Access denied\n\nMensagem: O acesso foi negado porque uma permissão necessária não foi concedida ou foi removida.\n\nAção: Revise as permissões whatsapp_business_messaging/management e o acesso ao WABA/número.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "15f56a10-7e78-411a-b012-6ac00fae47a2"
+          },
+          {
+            "id": "2470975a-ab84-4fdd-af63-71fda21f89e5",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 11140
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "d0e9095d-e458-4bc6-9241-1e33f96faaeb",
+                  "options": {
+                    "text": "ERRO 100 — Invalid parameter\n\nMensagem: A requisição contém um ou mais parâmetros inválidos, não suportados ou escritos incorretamente.\n\nAção: Revise o payload enviado para a Graph API.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "8de88367-b57e-4d94-a3c7-4c424479a1de"
+          },
+          {
+            "id": "2a775511-8382-46cd-913a-c7ac1b0aade3",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 9000
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "c38d5172-aa8c-46b1-b0fc-b99fe3d2ef4a",
+                  "options": {
+                    "text": "ERRO 133010 — Phone number not registered\n\nMensagem: O número não está registrado na WhatsApp Business Platform.\n\nAção: Registre o número corretamente antes de enviar mensagens.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "58862c61-02bd-4dde-857a-b317e3de6080"
+          },
+          {
+            "id": "2a9a6ec8-9856-4e7b-b921-8b8a6b384760",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 4700
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "d164a94d-3f7e-41bf-9f65-216b3f944058",
+                  "options": {
+                    "text": "ERRO 131030 — Recipient not in allowed list\n\nMensagem: O número do destinatário não está na lista permitida do número de teste da Cloud API.\n\nAção: Adicione o destinatário à lista de números de teste ou use um número de produção corretamente configurado.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "878881cd-aadd-4af9-b64b-78eea9dd6202"
+          },
+          {
+            "id": "2f7eafbe-333c-479d-94e6-51e9d65304a0",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 2680
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "85c0533c-618a-490c-9aa0-f46315c8f5ea",
+                  "options": {
+                    "text": "ERRO 130497 — Country messaging restriction\n\nMensagem: A conta está impedida de enviar mensagens para usuários de determinado país.\n\nAção: Verifique as restrições da conta e do país de destino.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "306d3690-1f19-438c-b55a-268c01373e91"
+          },
+          {
+            "id": "2fcb5f0f-77c5-46af-afdc-34f9300ffed7",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 6040
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "283d5700-7957-41ce-b4c4-f841e220a449",
+                  "options": {
+                    "text": "ERRO 132007 — Template Format Character Policy Violated\n\nMensagem: O conteúdo ou a formatação do template viola uma política/formato aceito pelo WhatsApp.\n\nAção: Revise o template e envie uma versão compatível para aprovação.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "3197750c-70e7-49a2-a6d8-5867a52e2ff2"
+          },
+          {
+            "id": "30d0209e-bebb-489b-adb2-5a0b1c17873f",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 1880
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "fcf6e94d-9cf7-438e-9d4f-be4e9380cc45",
+                  "options": {
+                    "text": "ERRO 131048 — Spam rate limit hit\n\nMensagem: O envio foi restringido por limite relacionado a spam/qualidade do número.\n\nAção: Reduza o volume, revise público/conteúdo e acompanhe a qualidade do número.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "d97a91ef-49c8-49a6-a798-d135de96804e"
+          },
+          {
+            "id": "33f4a43d-f132-4e5c-842a-c521379a242e",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 8280
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "9d982e38-36f7-4898-ac68-fe55632d696b",
+                  "options": {
+                    "text": "ERRO 133005 — Two-step verification PIN mismatch\n\nMensagem: O PIN da verificação em duas etapas está incorreto.\n\nAção: Informe o PIN correto antes de repetir o registro.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "0d876ef4-45b2-4803-a151-c44fb67ed264"
+          },
+          {
+            "id": "3647dfb5-84c4-4d5f-a68f-49fedd43ac91",
+            "type": "condition",
+            "presentation": {
+              "x": 900,
+              "y": 3980
+            },
+            "options": {
+              "conditions": [
+                {
+                  "id": "ad3828c7-12fb-4b9b-bf04-15ea52fbdfcd",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-130403",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "92645d30-2874-4849-bf14-445f1e50d00a"
+                },
+                {
+                  "id": "5b700df5-011b-4b32-8862-ac0e293e7005",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-130472",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "373d9bee-945c-4dd5-a746-d42f26e49538"
+                },
+                {
+                  "id": "4b659907-7748-410f-aa39-a697126c86c2",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131021",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "a43ceffd-b9d1-4910-9c0f-6b80e1b150e3"
+                },
+                {
+                  "id": "f193af14-741f-455c-9e3e-889340f2c2b5",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131026",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "840f4dc7-3315-447a-8cbf-ced175853f92"
+                },
+                {
+                  "id": "fe8ea10b-b2ed-4c78-96dc-c71f89356ab3",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131030",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "2a9a6ec8-9856-4e7b-b921-8b8a6b384760"
+                },
+                {
+                  "id": "1f032d79-7dbb-4669-b84e-0ccfdf989e43",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131049",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "5a131b8d-22c6-449e-bf46-26a887346285"
+                },
+                {
+                  "id": "0a24e032-2b72-4bdc-9366-61e7aac98dc8",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131050",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "a3e25cac-4e34-4d01-b08e-fcbfc9f0cd57"
+                }
+              ],
+              "trueNextBlockId": "",
+              "falseNextBlockId": "e4742b86-406d-4008-bb23-1bb73e563127"
+            },
+            "sourceBlockId": "f35055ee-8977-457e-8cc3-dba410ff9c3e"
+          },
+          {
+            "id": "373d9bee-945c-4dd5-a746-d42f26e49538",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 4160
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "dce0a381-c9c3-4bda-becc-38fd8b971ab9",
+                  "options": {
+                    "text": "ERRO 130472 — User is part of an experiment\n\nMensagem: A mensagem não foi enviada porque o número do usuário faz parte de um experimento da plataforma.\n\nAção: Não insista no reenvio imediato; trate como indisponibilidade específica do destinatário.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "99b18522-7bef-4983-a6ba-e4bf66e072d6"
+          },
+          {
+            "id": "3aae582b-3bd2-4d4d-a0a1-a2af649ab206",
+            "type": "condition",
+            "presentation": {
+              "x": 900,
+              "y": 9800
+            },
+            "options": {
+              "conditions": [
+                {
+                  "id": "4b9fe96e-bcdd-44e3-9677-4c448a1e4f2f",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131051",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "d4789493-2161-467a-ae0f-df46d319d3a4"
+                },
+                {
+                  "id": "e5be8e76-a8ca-40d0-b74f-1f4cc8d86480",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131052",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "7ea58cdd-9b10-4ec9-874b-8f51d647b644"
+                },
+                {
+                  "id": "cc6984d7-d0f7-4323-a93b-21965bc0cc42",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131053",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "1df98545-e3a1-43d9-a2b9-64e271f2cd23"
+                }
+              ],
+              "trueNextBlockId": "",
+              "falseNextBlockId": "ce7fb352-4526-46f7-80d5-943e6dd220eb"
+            },
+            "sourceBlockId": "3b24f664-7472-4fa3-a1c8-8c821bb0d56b"
+          },
+          {
+            "id": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 720
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "6f193b38-5ab6-4a48-b919-b6c905df50ab",
+                  "options": {
+                    "text": "ERRO 200-299 — API Permission\n\nMensagem: Erro de permissão da Graph API na faixa 200 a 299.\n\nAção: Revise as permissões concedidas ao aplicativo/usuário do sistema e o acesso aos ativos.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "368be7b0-6ad5-4d3e-9d5c-8b44d3b25187"
+          },
+          {
+            "id": "47268074-f7b8-4bbf-996a-11646dad9823",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 540
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "e2df4eff-95ac-4e7f-a669-f08723f5da4b",
+                  "options": {
+                    "text": "ERRO 190 — Access token expirado ou inválido\n\nMensagem: O token de acesso expirou, foi revogado ou não é válido para a requisição.\n\nAção: Gere ou atribua um token válido com as permissões corretas.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "a0da12da-0827-4831-80a4-4ba877257d3a"
+          },
+          {
+            "id": "4cf42660-2ab8-4aea-8a56-0f17fae959f4",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 9360
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "8c7536c8-c8bc-4abd-b125-03484e116cda",
+                  "options": {
+                    "text": "ERRO 133016 — Register/deregister rate limit exceeded\n\nMensagem: Houve tentativas demais de registrar ou desregistrar esse número em um curto período.\n\nAção: Aguarde antes de uma nova tentativa.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "ab575e58-6e2e-49ac-95df-aa04190fd14c"
+          },
+          {
+            "id": "4f06fa82-178e-464d-9d6f-87419b66182e",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 9180
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "7b07bf1e-30d7-4e7e-b31a-de143375d6ad",
+                  "options": {
+                    "text": "ERRO 133015 — Recently deleted phone number\n\nMensagem: O número foi removido recentemente e a exclusão ainda não terminou.\n\nAção: Aguarde alguns minutos antes de tentar registrá-lo novamente.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "f5e10f25-5f7c-42fd-8037-3ff6698cb45f"
+          },
+          {
+            "id": "4f99343c-f32a-4cf4-888b-4801f7b4fb02",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 8100
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "b4dd3fd6-aba0-4b54-b82f-c2c35b93787e",
+                  "options": {
+                    "text": "ERRO 133004 — Server Temporarily Unavailable\n\nMensagem: O servidor de registro está temporariamente indisponível.\n\nAção: Tente novamente depois com intervalo/backoff.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "d0f698a2-4b7c-4e24-978e-7d17ff52e87f"
+          },
+          {
+            "id": "5580452f-9fc4-42da-bf6f-9a4b57ef8684",
+            "type": "trigger",
+            "presentation": {
+              "x": 117,
+              "y": 0
+            },
+            "options": {
+              "triggers": [
+                {
+                  "name": "manually-lead-trigger",
+                  "group": "lead",
+                  "options": {}
+                },
+                {
+                  "name": "initiated-by-another-automation-trigger",
+                  "group": "system",
+                  "options": {
+                    "datasourceName": "Error=Api-oficial",
+                    "datasourceColor": "#3b82f6"
+                  }
+                }
+              ],
+              "nextBlockId": "9bffcf16-1e50-470b-b1e4-2cd8dd9a647d"
+            },
+            "sourceBlockId": "f81215d8-76d3-459d-ad4b-f60a9f32f430"
+          },
+          {
+            "id": "5845af9c-3cc3-4109-a862-3afb04e9a864",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 2500
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "34949258-1d20-4e5e-b53a-948b8eb98226",
+                  "options": {
+                    "text": "ERRO 368 — Temporarily blocked for policy violations\n\nMensagem: A conta do WhatsApp Business foi temporariamente restringida ou desabilitada por violação de política.\n\nAção: Verifique a qualidade/saúde da conta e as notificações no WhatsApp Manager antes de novos envios.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "027ac664-4015-478e-8c0d-fbe04c3f511f"
+          },
+          {
+            "id": "5a131b8d-22c6-449e-bf46-26a887346285",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 4880
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "eba4dfc7-a590-4694-8ae1-3c4ee387307b",
+                  "options": {
+                    "text": "ERRO 131049 — Meta chose not to deliver\n\nMensagem: A Meta optou por não entregar a mensagem para preservar a experiência do usuário, normalmente por limites de mensagens de marketing para esse destinatário.\n\nAção: Não faça reenvio imediato do mesmo marketing para esse contato.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "b4a72033-f2b5-404d-b58a-8e0a8c77529f"
+          },
+          {
+            "id": "5ae93f91-4ac2-49e4-8e58-ec0702e72341",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 5680
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "eef0da56-0df4-43ba-962d-d843d10604b7",
+                  "options": {
+                    "text": "ERRO 132001 — Template does not exist\n\nMensagem: O template não existe no idioma informado ou ainda não foi aprovado.\n\nAção: Confirme o nome exato, o código do idioma e o status de aprovação do template.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "31dc1321-90a1-42ec-8b68-d869bf54b559"
+          },
+          {
+            "id": "61789e63-a276-4f08-bc1b-5e598ef1fb7a",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 11320
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "6a8f8b43-eb4d-410f-861f-e55a586e6434",
+                  "options": {
+                    "text": "ERRO 131000 — Something went wrong\n\nMensagem: A mensagem falhou por um erro desconhecido da plataforma.\n\nAção: Registre os detalhes/fbtrace_id e tente novamente se o erro for temporário.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "14783b8d-0e18-48a4-80ef-dabbe8e612ed"
+          },
+          {
+            "id": "6bde1961-626a-42c7-8c1a-3f186e65f97c",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 12040
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "093a1400-5769-46db-a296-e096a3960567",
+                  "options": {
+                    "text": "ERRO 135000 — Generic user error\n\nMensagem: A mensagem falhou por um erro desconhecido nos parâmetros da solicitação.\n\nAção: Revise os parâmetros e os detalhes retornados pela API.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "c949092e-5857-4ad9-932f-97cadcf432cc"
+          },
+          {
+            "id": "7648a31a-8f6e-4b85-965b-b679f2425ea3",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 8460
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "beed2f52-4675-48e2-8cbf-6c25b661039a",
+                  "options": {
+                    "text": "ERRO 133006 — Phone number re-verification needed\n\nMensagem: O número precisa ser verificado novamente antes do registro.\n\nAção: Refaça a verificação do número.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "700386e8-3050-46d9-bbed-32b47f34e1db"
+          },
+          {
+            "id": "792c7d66-bced-43e6-a635-f5a7790284b2",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 2060
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "f1176ec0-38c3-4e51-9db6-e0d48d3eff82",
+                  "options": {
+                    "text": "ERRO 131056 — Pair rate limit hit\n\nMensagem: Foram enviadas muitas mensagens do mesmo remetente para o mesmo destinatário em pouco tempo.\n\nAção: Espere antes de enviar novamente para esse mesmo contato.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "184ff0e9-e8b6-443a-bc39-33bcd46c751b"
+          },
+          {
+            "id": "7ea58cdd-9b10-4ec9-874b-8f51d647b644",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 9980
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "2c076c07-664e-4038-8535-9b557d39285f",
+                  "options": {
+                    "text": "ERRO 131052 — Media download error\n\nMensagem: Não foi possível baixar a mídia enviada pelo usuário.\n\nAção: Tente novamente e valide a disponibilidade da mídia.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "65776dbc-7676-4cbc-9dab-8f93e13a3ff3"
+          },
+          {
+            "id": "8013e42c-403f-4fbf-af99-dbba88a8040f",
+            "type": "condition",
+            "presentation": {
+              "x": 900,
+              "y": 1340
+            },
+            "options": {
+              "conditions": [
+                {
+                  "id": "10b639d5-f62e-4a31-8404-129171d47c21",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-4",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "13c354d0-9918-4011-afc0-9e29db72f296"
+                },
+                {
+                  "id": "b78ca656-ae1c-49a3-b5d3-a9721815eda5",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-80007",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "f041c89d-59a8-46de-a524-77fcc9ea88d8"
+                },
+                {
+                  "id": "e27ec787-bb6a-432d-b494-65a3378e2ace",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-130429",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "90271870-5619-4f8c-8c46-5b1d04f7ca97"
+                },
+                {
+                  "id": "09c2570f-c57b-4130-aa8a-d67eb8ae5a5f",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131048",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "30d0209e-bebb-489b-adb2-5a0b1c17873f"
+                },
+                {
+                  "id": "2299e825-b1e2-403c-b382-cbfedfc4c2c1",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131056",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "792c7d66-bced-43e6-a635-f5a7790284b2"
+                }
+              ],
+              "trueNextBlockId": "",
+              "falseNextBlockId": "fadd8cf5-8d88-4e86-ab65-0e31bad2e335"
+            },
+            "sourceBlockId": "22bc9098-3dc8-4202-bfd5-b15ba9e523b2"
+          },
+          {
+            "id": "824ec66a-9f03-4623-823b-67933c869d32",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 360
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "3e1608e3-299a-480f-b0ee-97a6d9eff540",
+                  "options": {
+                    "text": "ERRO 10 — Permission Denied\n\nMensagem: A permissão necessária não foi concedida ou foi removida.\n\nAção: Conceda novamente as permissões necessárias e confira o usuário do sistema.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "0c2e29d0-b01c-4f35-aaf0-969d5d713cd3"
+          },
+          {
+            "id": "840f4dc7-3315-447a-8cbf-ced175853f92",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 4520
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "ac687b76-9f16-46d2-bb2c-4bcdb4877977",
+                  "options": {
+                    "text": "ERRO 131026 — Message undeliverable\n\nMensagem: A mensagem não pôde ser entregue ao destinatário. O número pode não usar WhatsApp ou não estar apto a receber a mensagem.\n\nAção: Valide o número e evite repetir indefinidamente o mesmo envio.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "6943cfb1-158b-4a4b-9f70-23605d862f24"
+          },
+          {
+            "id": "85d898d9-2a53-400a-b178-395b7f0c6915",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 6760
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "fc4eb1c6-5ae1-4ae7-aef2-328389f723b9",
+                  "options": {
+                    "text": "ERRO 132068 — Flow is blocked\n\nMensagem: O Flow usado na mensagem está em estado bloqueado.\n\nAção: Corrija ou publique um Flow válido antes de reenviar.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "4a703512-b892-493c-81cb-23391eb3f1af"
+          },
+          {
+            "id": "90271870-5619-4f8c-8c46-5b1d04f7ca97",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 1700
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "e34e9cd7-d1c8-4030-850f-f48889bb42c4",
+                  "options": {
+                    "text": "ERRO 130429 — Rate limit hit\n\nMensagem: A vazão de mensagens da Cloud API foi atingida.\n\nAção: Reduza a velocidade de envio e tente novamente com backoff.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "07466e80-3b40-40ef-9147-13fa66c1ff5f"
+          },
+          {
+            "id": "92645d30-2874-4849-bf14-445f1e50d00a",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 3980
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "1b46c36b-0b5a-4133-8999-8793640c85bb",
+                  "options": {
+                    "text": "ERRO 130403 — Business has blocked the user\n\nMensagem: A mensagem não pôde ser entregue porque a empresa bloqueou esse usuário no WhatsApp.\n\nAção: Desbloqueie o contato no lado da empresa se o bloqueio tiver sido acidental.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "e7f059ff-d7d8-4488-b834-0fddcb2ec4c4"
+          },
+          {
+            "id": "9bffcf16-1e50-470b-b1e4-2cd8dd9a647d",
+            "type": "condition",
+            "presentation": {
+              "x": 900,
+              "y": 0
+            },
+            "options": {
+              "conditions": [
+                {
+                  "id": "947ec235-4f39-4b77-8c08-ff810c8ff627",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-0",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "dc527c5c-b59c-4d61-9a36-42171ce632b6"
+                },
+                {
+                  "id": "4de7dd77-abf7-4195-9e34-cb3dc3b17b43",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-3",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "9d4046a2-cf69-4542-a9ce-90832ddb79ff"
+                },
+                {
+                  "id": "ecbd84c4-98dd-40d9-8c8f-75fe62f2a7d4",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-10",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "824ec66a-9f03-4623-823b-67933c869d32"
+                },
+                {
+                  "id": "f0e4920e-b5d4-4610-b85d-3f309693f4a2",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-190",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "47268074-f7b8-4bbf-996a-11646dad9823"
+                },
+                {
+                  "id": "4f9bdc88-5569-408c-9039-7c7757d11ff1",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-200",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "d7aa7905-d151-4793-81e5-0199718cfcd7",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-201",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "02783d98-df59-4933-b2e7-9a322556ad74",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-202",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "2cc49ddc-0934-45d3-8d1a-680654c15231",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-203",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "b60e1f11-1989-40b8-9706-93a6ff3c4f5e",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-204",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "9b331c7c-6574-4dce-b150-6e039d22add8",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-205",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "d28c0e3a-69b4-46c6-b8dd-388e1151b3cb",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-206",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "e945dff5-f90d-441f-84f2-7b13eb0070da",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-207",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "79ea3b9a-57f9-4880-bc85-8812151538e7",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-208",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "eb4d90ee-ed55-437e-88c2-40e508f8fc66",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-209",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "79909c48-1329-454f-a87e-72a14383ecca",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-210",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "706704fe-9831-4a8b-b3a2-2dba8997ba5c",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-211",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "190e2e17-96fa-4e5c-b4cd-c1ff85d47881",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-212",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "cfc89771-0c0c-435c-b04e-17839f89d57a",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-213",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "d175c14f-2938-4d07-8ee7-df9109282368",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-214",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "91ad2784-ecc8-4050-943f-59e71f58cf6a",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-215",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "44c863d2-0480-492f-af17-41a794d580a8",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-216",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "eda8da6c-c6f9-4eec-b90d-37e9723ac5a3",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-217",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "a82e11f5-71e0-40d5-a7d9-75b0700fedc3",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-218",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "469b2b2d-1be1-4e7b-934b-a4f678088ec7",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-219",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "70c4f2c3-2e40-455c-b095-329b4043bee0",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-220",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "5323d5e6-6a42-4c0e-94e5-74695dd9f789",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-221",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "d1b7996e-75dc-4f0d-9a81-cb36169c0f17",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-222",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "9e9d9d5c-d791-481e-85bc-5835748ab323",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-223",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "66d41a9f-261f-4138-bcb0-f2c2ad0b0fac",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-224",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "25f882af-1c96-4646-bde9-53b3e31b9c6a",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-225",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "020cf5ed-c0c9-4c71-b9b1-9d0f002dd8e6",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-226",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "77bbaf73-adb9-4d53-b891-3eec36b3cd62",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-227",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "3616a2ad-fd15-4aa9-a1f1-f903f23aa5eb",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-228",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "7be30f3b-2bc6-4c80-bd7c-1c793e0e912c",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-229",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "5e70c14c-2dce-4d17-ae88-f0cf04dc5a7f",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-230",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "4e26ce23-505a-468f-a40c-c1ce802e9151",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-231",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "7517558a-019a-426b-9fcc-f5bdfb051fdc",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-232",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "4ea33b28-667c-479b-88c0-4430febfcf40",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-233",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "879e0184-83ca-40a7-8fc4-4f4143d7a95c",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-234",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "4beda5f3-8b4e-4413-a65f-240efca73bff",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-235",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "8a9389b8-194f-4042-ab46-e1edde1faabc",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-236",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "e771528b-acc3-4303-8f36-c0fad4b80029",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-237",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "58031660-aaea-4e82-9f08-4f5582c6d0f6",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-238",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "02e7dcfd-552f-4ccd-8e12-bef5d4bd820c",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-239",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "3c3887b5-9b7a-40c3-9b72-b5cc4eea985a",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-240",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "760f4e07-615d-4442-a4d5-58b75b04ced8",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-241",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "80d0e453-e58f-4445-a364-e5278caaf80d",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-242",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "8ea5c323-0b78-43c3-bf4a-c9f3efcfae96",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-243",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "314b9aee-f7a6-42ee-9bce-0771a9fad4b8",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-244",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "492f9540-77b6-42ee-912e-1fd2076ab3c1",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-245",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "59ffd707-c13e-4728-94d3-452860cdfdc3",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-246",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "ab943db6-e285-4368-9254-f7efc06ca054",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-247",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "2a88869e-1539-41a3-b158-d46d3a3a6843",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-248",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "ed1a1240-c58c-42d8-8fa4-89fb0e8f778f",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-249",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "47b96c9e-ffa2-4fec-94c7-d3f6419d24fd",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-250",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "6d1b9689-8e31-41db-8e44-5286411eb682",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-251",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "43f92560-0455-4dc5-87a7-b2888ed35a3f",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-252",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "38cf27d5-cad7-41df-aebc-a9daeef1d0ab",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-253",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "f75af681-5a7b-48ae-9406-b162962b740b",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-254",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "7955d3cc-e790-482d-b2cb-2c104665dd11",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-255",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "e53f29d3-73dc-4b3c-abfd-57fd96a90c19",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-256",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "58f2a00c-0c4e-48e7-af31-ba15cd322871",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-257",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "3321bbaa-01cc-43b3-893b-024b4621fcf3",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-258",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "aaef4edc-30d9-4969-9cb2-a642a4bee733",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-259",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "1be46329-d6ac-43a0-bab3-dafb61756344",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-260",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "83ebbb81-6c2c-4723-a964-4e7e3bf194fd",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-261",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "87361571-d844-402a-a058-1e05ecdc4f76",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-262",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "fc4d53ec-dc14-416c-8f12-85ebe5ec7480",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-263",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "4d26383b-eca5-480b-8f19-47818b1ae496",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-264",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "76b9d41d-eb68-4674-8554-3fe5ede5377e",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-265",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "7bd04149-8f41-429b-b5e2-710e15d6a8f2",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-266",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "fd09c40c-7ef4-4c03-9933-0d3fc27e8a78",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-267",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "1c3104f9-686d-42d2-aa5c-b12fea5c18d9",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-268",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "87c85571-347f-45dc-ac00-b294d5c352b8",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-269",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "32fc3cee-d3ea-4a08-a8b4-2a0fa714d4b2",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-270",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "f26ba6e8-1d36-4284-8831-21e46fb00446",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-271",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "617f5477-fc0d-4cd8-966f-7a4d4a2bafdb",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-272",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "20334c65-9838-474b-9a15-772c67d12a61",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-273",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "48fd3ca6-c80c-4686-99f6-3a25cf6cd05b",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-274",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "aac8844e-3c2f-449e-ba7a-524ec31cb5b5",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-275",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "d476a106-dec4-4b37-bbe7-c0fcd2c28eee",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-276",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "e557fc0c-7b6e-4cad-9b5e-de5c9da5b52e",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-277",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "065bb983-aa0e-4976-a161-10f481523c36",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-278",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "ec591c21-059d-463e-85c8-656a663b0e1c",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-279",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "cef16c19-a710-4ffe-a1dc-dae6d1af8f61",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-280",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "72642edf-3055-4f21-868c-8521efed687b",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-281",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "7bca0efc-c2a7-4e59-979a-dc90d6bc2c3b",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-282",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "2724d63a-2b57-4023-832b-bb651d71ab83",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-283",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "cf878335-7752-4d4d-a019-c1737289191d",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-284",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "7b80b298-d400-4efe-ad17-64a74411884a",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-285",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "357e1d4b-89fe-4cbc-9a4a-37f6bfcd917f",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-286",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "a36daa25-81d4-4c60-846c-687620967309",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-287",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "ecf1d13c-b200-4c4b-98bc-bd11b5cb159a",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-288",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "3396ce71-1bc7-4216-a3ac-32126024eb1b",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-289",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "91ae3062-53c5-4fc1-b77b-3c54c008eca8",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-290",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "71945a72-2560-468b-9417-41fea194732f",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-291",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "36cd844a-2ca2-47fa-b137-578be41d8e8b",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-292",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "5b11380d-477c-419a-bb97-c13cea5467c9",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-293",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "2d05a773-d691-46cb-bd25-b9a4206169e4",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-294",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "77a8c81c-92f7-415e-9d11-4a0f9b58a51e",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-295",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "f24f9dc7-98a0-4a30-a327-72f70d8c9ad5",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-296",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "eb703cc2-eb18-4ace-b87d-f08e187f43b9",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-297",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "5f6e85ec-a48e-416c-8178-119279dd55d8",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-298",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "89905880-5079-4e14-8e23-4a1d56665f39",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-299",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "3e4f21ce-7b20-4de0-b5b4-c0f00a420e64"
+                },
+                {
+                  "id": "0a9f9fe4-7a49-443f-85dc-758e4f1819db",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131005",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "245d8582-a30b-4d9b-b4a8-d9731472e94f"
+                }
+              ],
+              "trueNextBlockId": "",
+              "falseNextBlockId": "8013e42c-403f-4fbf-af99-dbba88a8040f"
+            },
+            "sourceBlockId": "8a027db6-9500-4f47-a782-a2b4c7c7c94a"
+          },
+          {
+            "id": "9c8694a2-4484-4a6e-99cd-b6329a9d8fae",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 3040
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "1da6af53-e8cd-4dce-83f5-036e74ecafd6",
+                  "options": {
+                    "text": "ERRO 131042 — Business eligibility payment issue\n\nMensagem: O envio falhou por um problema de elegibilidade ou forma de pagamento da conta.\n\nAção: Revise a forma de pagamento e a situação de cobrança da conta do WhatsApp Business.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "5f9ad522-d4d4-409e-b4f0-60bd9aeb2510"
+          },
+          {
+            "id": "9d4046a2-cf69-4542-a9ce-90832ddb79ff",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 180
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "16339a05-046e-40f3-b435-85601d384f3a",
+                  "options": {
+                    "text": "ERRO 3 — API Method\n\nMensagem: O aplicativo não tem a capacidade ou permissão necessária para executar este método.\n\nAção: Revise as permissões do app e o acesso ao ativo do WhatsApp.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "e70c0f01-51eb-423f-b037-95a587f96389"
+          },
+          {
+            "id": "a24a0098-6750-4192-9656-9669c43173ca",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 6580
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "d28c3746-ef63-4309-a990-44b1c144204a",
+                  "options": {
+                    "text": "ERRO 132016 — Template is Disabled\n\nMensagem: O template foi pausado repetidas vezes por baixa qualidade e foi desativado.\n\nAção: Não tente reenviar esse template; crie/ajuste outro modelo aprovado.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "5833c8d3-4611-48ee-befd-73e4110a8916"
+          },
+          {
+            "id": "a3e25cac-4e34-4d01-b08e-fcbfc9f0cd57",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 5060
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "f0bd4627-0fce-4263-a41f-4dd5ff9e5313",
+                  "options": {
+                    "text": "ERRO 131050 — User stopped marketing messages\n\nMensagem: O destinatário optou por não receber mensagens de marketing dessa empresa no WhatsApp.\n\nAção: Respeite a opção do usuário e não envie marketing para esse contato.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "b0873dbe-6658-426b-a3bc-2bb70922e93d"
+          },
+          {
+            "id": "a43ceffd-b9d1-4910-9c0f-6b80e1b150e3",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 4340
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "0e2d87dd-d424-41f6-96dc-0052707823eb",
+                  "options": {
+                    "text": "ERRO 131021 — Recipient cannot be sender\n\nMensagem: O número do remetente e o número do destinatário são o mesmo.\n\nAção: Use um número de destino diferente do número que está enviando.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "8d044a22-86f0-402f-a7a3-f941b5b15ed9"
+          },
+          {
+            "id": "aa2a25de-f621-4233-89c5-a02ec13e67b7",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 11860
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "5d154322-28d2-41b0-906c-30923e685f82",
+                  "options": {
+                    "text": "ERRO 131016 — Service unavailable\n\nMensagem: Um serviço necessário está temporariamente indisponível.\n\nAção: Tente novamente depois com backoff.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "d0c5b75e-bd69-46cf-ba9f-23ab6e7ac19a"
+          },
+          {
+            "id": "b1dcacb9-7936-4d13-81ac-b35fbf84427b",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 10960
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "562ef846-9d0a-4b5a-aab8-4c05fb700ffb",
+                  "options": {
+                    "text": "ERRO 33 — Parameter value is not valid\n\nMensagem: Um valor de parâmetro é inválido; em alguns casos o número comercial foi removido.\n\nAção: Confirme o phone_number_id e os parâmetros usados na chamada.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "e74823fb-1d07-465a-9a5d-b42399160143"
+          },
+          {
+            "id": "b9c4d3bd-71ba-4c41-aa71-85ab33075659",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 5860
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "59baf1b4-0a8c-4c02-ae44-5453d1e4f89c",
+                  "options": {
+                    "text": "ERRO 132005 — Template Hydrated Text Too Long\n\nMensagem: O texto final do template ficou maior que o limite permitido depois da substituição das variáveis.\n\nAção: Reduza o conteúdo das variáveis ou o texto do template.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "c9b629dc-a861-4748-a82b-221e4e3ccd71"
+          },
+          {
+            "id": "bd7a8d12-8d7a-473a-8286-efacb7ec7126",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 11500
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "396f0074-ccc5-47f0-8c04-95adc85065df",
+                  "options": {
+                    "text": "ERRO 131008 — Required parameter is missing\n\nMensagem: A requisição está sem um parâmetro obrigatório.\n\nAção: Inclua o parâmetro ausente no payload.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "9f2c86f8-08ac-4a69-b793-d5bf25bedf77"
+          },
+          {
+            "id": "c3014453-84ef-46c4-ad79-a2c5ffbf4ff6",
+            "type": "condition",
+            "presentation": {
+              "x": 900,
+              "y": 3480
+            },
+            "options": {
+              "conditions": [
+                {
+                  "id": "1604a772-f977-4cc9-b186-b0a74f4c2762",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131047",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "cc90167f-5ce6-4b13-8648-40d451d42e1c"
+                }
+              ],
+              "trueNextBlockId": "",
+              "falseNextBlockId": "3647dfb5-84c4-4d5f-a68f-49fedd43ac91"
+            },
+            "sourceBlockId": "ff03f075-b621-4cfd-ab84-57f665779870"
+          },
+          {
+            "id": "cc90167f-5ce6-4b13-8648-40d451d42e1c",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 3480
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "f610fb29-e52e-41f7-9aa6-532841d3eca1",
+                  "options": {
+                    "text": "ERRO 131047 — Re-engagement message\n\nMensagem: Passaram mais de 24 horas desde a última mensagem do cliente e uma mensagem livre não pode ser enviada.\n\nAção: Use um template aprovado para reabrir a conversa ou aguarde nova mensagem do cliente.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "b3ace924-e6d1-4fc8-a768-d9d643fff7f8"
+          },
+          {
+            "id": "ce7fb352-4526-46f7-80d5-943e6dd220eb",
+            "type": "condition",
+            "presentation": {
+              "x": 900,
+              "y": 10600
+            },
+            "options": {
+              "conditions": [
+                {
+                  "id": "371854bc-4324-4c4c-97a8-42cef266fe7e",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-1",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "fb139602-6bb7-493a-a4f9-5b82075aeb76"
+                },
+                {
+                  "id": "989fe752-525b-4fed-a145-8112766e3dae",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-2",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "d18857c4-f9e7-4658-a7b9-f61faff7e8f1"
+                },
+                {
+                  "id": "73d3cd54-7fd2-4156-aa6b-e7d8a43eef28",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-33",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "b1dcacb9-7936-4d13-81ac-b35fbf84427b"
+                },
+                {
+                  "id": "a0d7811d-82ce-409c-addd-54216cf1132d",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-100",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "2470975a-ab84-4fdd-af63-71fda21f89e5"
+                },
+                {
+                  "id": "b5f17c88-e262-474b-a836-cbd6545b03d6",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131000",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "61789e63-a276-4f08-bc1b-5e598ef1fb7a"
+                },
+                {
+                  "id": "cf5a132c-e6ef-4d4e-ad6e-f45b56fb6a57",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131008",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "bd7a8d12-8d7a-473a-8286-efacb7ec7126"
+                },
+                {
+                  "id": "6e8568c4-320b-4826-bd37-2732644f944d",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131009",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "19b320e8-c90d-4021-abb0-1355c010c0a4"
+                },
+                {
+                  "id": "bdec3cad-378f-42cb-951f-39c9fe693c58",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131016",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "aa2a25de-f621-4233-89c5-a02ec13e67b7"
+                },
+                {
+                  "id": "7b06ffc2-97eb-4739-8efb-5f03d33b0f82",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-135000",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "6bde1961-626a-42c7-8c1a-3f186e65f97c"
+                }
+              ],
+              "trueNextBlockId": "",
+              "falseNextBlockId": ""
+            },
+            "sourceBlockId": "6a8bd898-3db4-427d-8453-ec4d272b2c9e"
+          },
+          {
+            "id": "d18857c4-f9e7-4658-a7b9-f61faff7e8f1",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 10780
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "f7d9c3fa-c63f-4dda-85bf-c803e53e6752",
+                  "options": {
+                    "text": "ERRO 2 — API Service\n\nMensagem: O serviço está temporariamente indisponível ou sobrecarregado.\n\nAção: Tente novamente depois com backoff.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "2954a1f8-1cd9-4399-9d11-17cbc0950750"
+          },
+          {
+            "id": "d4789493-2161-467a-ae0f-df46d319d3a4",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 9800
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "b2172b4f-d1e0-400a-ab58-8e45ed3bbcbe",
+                  "options": {
+                    "text": "ERRO 131051 — Unsupported message type\n\nMensagem: O tipo de mensagem enviado não é suportado.\n\nAção: Use um tipo de mensagem compatível com a Cloud API.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "6ca172f5-e3a2-4449-ac63-681185ef107b"
+          },
+          {
+            "id": "db29f337-cdad-415b-8b25-f344d0ea4f19",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 7380
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "3067523b-99db-42db-9522-09d6567305bd",
+                  "options": {
+                    "text": "ERRO 131037 — Display name approval required\n\nMensagem: O número fornecido pelo WhatsApp precisa ter o nome de exibição aprovado antes de enviar mensagens.\n\nAção: Aguarde ou conclua a aprovação do nome de exibição.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "cea6562c-eb83-4916-83a5-50eb4f0ba7df"
+          },
+          {
+            "id": "dc527c5c-b59c-4d61-9a36-42171ce632b6",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 0
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "9faf82cc-26bb-4eea-ad5f-50ef56d99d05",
+                  "options": {
+                    "text": "ERRO 0 — AuthException\n\nMensagem: Não foi possível autenticar o usuário do aplicativo.\n\nAção: Revise o token, o usuário do sistema e as credenciais usadas na chamada.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "ecaf84da-ee64-4ea7-86c8-f5d05b9e594b"
+          },
+          {
+            "id": "de0eaadf-ff0a-466d-a2da-b064821868a2",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 7560
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "bf0f33b4-f970-4a7b-83a9-57a006434063",
+                  "options": {
+                    "text": "ERRO 131045 — Incorrect certificate / registration error\n\nMensagem: A mensagem falhou por um erro de registro do número.\n\nAção: Revise o registro do número e as credenciais/certificado relacionados.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "0dace77c-7770-4bd8-b2cd-b422a2b1e147"
+          },
+          {
+            "id": "e4742b86-406d-4008-bb23-1bb73e563127",
+            "type": "condition",
+            "presentation": {
+              "x": 900,
+              "y": 5500
+            },
+            "options": {
+              "conditions": [
+                {
+                  "id": "8a06ee69-eeef-4388-8f36-738a809a65c6",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-132000",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "1658e63e-5f35-4949-90d2-31521a2dc513"
+                },
+                {
+                  "id": "5324ebf3-c1c5-4232-ae1a-72a25b331d7f",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-132001",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "5ae93f91-4ac2-49e4-8e58-ec0702e72341"
+                },
+                {
+                  "id": "b7105c33-8445-4292-a091-91b227cf8e10",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-132005",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "b9c4d3bd-71ba-4c41-aa71-85ab33075659"
+                },
+                {
+                  "id": "4afcb616-0d90-452f-988b-6caa2f5b0e15",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-132007",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "2fcb5f0f-77c5-46af-afdc-34f9300ffed7"
+                },
+                {
+                  "id": "13f868f3-5e87-4b1d-8a13-16633984199a",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-132012",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "11531007-45d6-4ea2-879b-f1f15ff3e92b"
+                },
+                {
+                  "id": "905f7d26-de86-41a5-9b17-f47f7672c1c8",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-132015",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "01d112a2-03fe-49a6-ad6a-29f1b544857e"
+                },
+                {
+                  "id": "dd659590-246f-438c-87ae-3f510c154991",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-132016",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "a24a0098-6750-4192-9656-9669c43173ca"
+                },
+                {
+                  "id": "396375fd-64da-4af8-972a-3d3660e1b9fc",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-132068",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "85d898d9-2a53-400a-b178-395b7f0c6915"
+                },
+                {
+                  "id": "c518ac63-b749-4a2d-b2d5-383d379e8a1b",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-132069",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "05314531-806a-4d8e-baa3-20237de4f44b"
+                }
+              ],
+              "trueNextBlockId": "",
+              "falseNextBlockId": "f74d707a-2850-4695-8c3a-0980ea88971d"
+            },
+            "sourceBlockId": "008bf3c4-5127-480c-bedb-521fc63cefbe"
+          },
+          {
+            "id": "e4ff5cef-19ea-4737-a784-8721504a7f7a",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 8820
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "677b0e70-232b-4e68-94e9-e60e65ead2b7",
+                  "options": {
+                    "text": "ERRO 133009 — PIN guessed too fast\n\nMensagem: As tentativas de PIN foram feitas rápido demais.\n\nAção: Aguarde antes de uma nova tentativa.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "704474e0-5b57-49bd-82b0-e3929b9cbd76"
+          },
+          {
+            "id": "f041c89d-59a8-46de-a524-77fcc9ea88d8",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 1520
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "1d8d9e21-7544-493b-88c6-d231f3f57a1a",
+                  "options": {
+                    "text": "ERRO 80007 — WABA rate limit\n\nMensagem: A conta do WhatsApp Business atingiu o limite de taxa.\n\nAção: Reduza o volume e tente novamente após um intervalo.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "20725af3-2f2c-4849-9291-5bca57c254f7"
+          },
+          {
+            "id": "f74d707a-2850-4695-8c3a-0980ea88971d",
+            "type": "condition",
+            "presentation": {
+              "x": 900,
+              "y": 7380
+            },
+            "options": {
+              "conditions": [
+                {
+                  "id": "6d70bd1c-a473-4424-b8c3-0aad325c708f",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131037",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "db29f337-cdad-415b-8b25-f344d0ea4f19"
+                },
+                {
+                  "id": "baf9a6e1-77f3-42eb-ac93-d92197107e40",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131045",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "de0eaadf-ff0a-466d-a2da-b064821868a2"
+                },
+                {
+                  "id": "1694802b-d845-4cf7-a8d5-22c6f53ee7d3",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131057",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "1e88c3d1-67d3-4c27-a3b7-8e5b4c6dab10"
+                },
+                {
+                  "id": "d604e3e2-20ee-4e2d-8ffd-87a6d2c56884",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-133000",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "0963330f-9cb9-4fc6-ad30-f1462ca18de5"
+                },
+                {
+                  "id": "4a2d7254-11da-44b9-9007-cd81b5c3cfdd",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-133004",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "4f99343c-f32a-4cf4-888b-4801f7b4fb02"
+                },
+                {
+                  "id": "234efa46-5fb8-4bcf-a0a5-1a747039caf1",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-133005",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "33f4a43d-f132-4e5c-842a-c521379a242e"
+                },
+                {
+                  "id": "7325d5e7-0541-4443-960d-bd8187d7bf92",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-133006",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "7648a31a-8f6e-4b85-965b-b679f2425ea3"
+                },
+                {
+                  "id": "6e6f97af-fdeb-4456-94cb-aa28452cbfc1",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-133008",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "23ffb104-ccda-4f7d-a8d4-609fe38af69e"
+                },
+                {
+                  "id": "969204c2-6019-458a-a21f-c5e2888a2445",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-133009",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "e4ff5cef-19ea-4737-a784-8721504a7f7a"
+                },
+                {
+                  "id": "76115c57-3144-46b8-ad8d-ad22048efefa",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-133010",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "2a775511-8382-46cd-913a-c7ac1b0aade3"
+                },
+                {
+                  "id": "ace2df94-52e1-445e-abbe-89165b0d62c1",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-133015",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "4f06fa82-178e-464d-9d6f-87419b66182e"
+                },
+                {
+                  "id": "69acf83f-2bc8-4e15-9c69-441e355a6742",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-133016",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "4cf42660-2ab8-4aea-8a56-0f17fae959f4"
+                }
+              ],
+              "trueNextBlockId": "",
+              "falseNextBlockId": "3aae582b-3bd2-4d4d-a0a1-a2af649ab206"
+            },
+            "sourceBlockId": "a97009bc-806f-4ff4-8d7e-f77bedd94c1b"
+          },
+          {
+            "id": "fa5df448-b191-4c51-b5b9-1b1a7d3712c3",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 2860
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "a73bd301-a417-4363-9d7d-77ea756efa8b",
+                  "options": {
+                    "text": "ERRO 131031 — Account has been locked\n\nMensagem: A conta do WhatsApp Business associada ao app foi restringida ou desabilitada, ou os dados de verificação informados não conferem (por exemplo, PIN de duas etapas incorreto).\n\nAção: Verifique o status da WABA/número e confirme os dados de registro/PIN antes de tentar novamente.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "5597f614-6411-4c1b-bf7f-15e8d14030dc"
+          },
+          {
+            "id": "fadd8cf5-8d88-4e86-ab65-0e31bad2e335",
+            "type": "condition",
+            "presentation": {
+              "x": 900,
+              "y": 2500
+            },
+            "options": {
+              "conditions": [
+                {
+                  "id": "08d6cbd2-ae61-4311-92c6-a47febecf415",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-368",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "5845af9c-3cc3-4109-a862-3afb04e9a864"
+                },
+                {
+                  "id": "de571621-0ddd-4371-baaf-77cba490f29c",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-130497",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "2f7eafbe-333c-479d-94e6-51e9d65304a0"
+                },
+                {
+                  "id": "2058f6a8-3095-49ee-928b-a9ef83ea56ad",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131031",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "fa5df448-b191-4c51-b5b9-1b1a7d3712c3"
+                },
+                {
+                  "id": "199d63e1-bace-4066-b681-447a304edbbb",
+                  "name": "field-is-equal-condition",
+                  "group": "field",
+                  "options": {
+                    "equalsTo": "chat.errors.whatsapp-cloud-error.error-code-131042",
+                    "parameter": "lastErrorCode"
+                  },
+                  "nextBlockId": "9c8694a2-4484-4a6e-99cd-b6329a9d8fae"
+                }
+              ],
+              "trueNextBlockId": "",
+              "falseNextBlockId": "c3014453-84ef-46c4-ad79-a2c5ffbf4ff6"
+            },
+            "sourceBlockId": "652ba836-f660-4939-8bca-a20b0d662e47"
+          },
+          {
+            "id": "fb139602-6bb7-493a-a4f9-5b82075aeb76",
+            "type": "chat",
+            "presentation": {
+              "x": 1650,
+              "y": 10600
+            },
+            "options": {
+              "messages": [
+                {
+                  "name": "send-text-message",
+                  "group": "messages",
+                  "stepId": "1cb0667c-1aac-44e5-9630-bf4e33b5bafb",
+                  "options": {
+                    "text": "ERRO 1 — API Unknown\n\nMensagem: A solicitação é inválida ou ocorreu um erro genérico/temporário no servidor.\n\nAção: Revise a requisição e tente novamente se o payload estiver correto.",
+                    "buttons": [],
+                    "breakMessages": false,
+                    "breakMessagesIntervalInSeconds": 2
+                  }
+                }
+              ],
+              "platform": "",
+              "provider": "",
+              "timezone": "",
+              "contactId": "",
+              "instanceId": "",
+              "nextBlockId": "",
+              "isAnnotation": true,
+              "scheduledDate": "",
+              "errorNextBlockId": ""
+            },
+            "sourceBlockId": "4a2a1e9a-ab2c-4682-851a-6177e26b8499"
+          }
+        ]
+      }
+    ]
+  }
+}
